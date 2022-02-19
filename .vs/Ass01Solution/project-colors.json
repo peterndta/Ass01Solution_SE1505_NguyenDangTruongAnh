@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "b3bf533e-55b2-4354-a952-8c46912ad2bf": {
+      "ProjectGuid": "b3bf533e-55b2-4354-a952-8c46912ad2bf",
+      "DisplayName": "DataAccess",
+      "ColorIndex": 0
+    },
+    "d450403f-db89-4457-bd8a-13824ffdeb00": {
+      "ProjectGuid": "d450403f-db89-4457-bd8a-13824ffdeb00",
+      "DisplayName": "BusinessObject",
+      "ColorIndex": 1
+    },
+    "d777eed8-9e08-4273-bd8a-39dc793e79a7": {
+      "ProjectGuid": "d777eed8-9e08-4273-bd8a-39dc793e79a7",
+      "DisplayName": "MyStoreWinApp",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}

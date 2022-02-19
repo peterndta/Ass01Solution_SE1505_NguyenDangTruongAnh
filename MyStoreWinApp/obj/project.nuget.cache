@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "CbU/rcyeUL06vJ5SMBnXNobBu8xVq/4JHcSLe8ptbYhSSv0UTt5jCrz3N/eTjL0lmAy7FuEBvo7QmWQsqnvsKg==",
+  "success": true,
+  "projectFilePath": "E:\\Works\\CN5\\PRN211\\Code PRN\\Ass01Solution\\MyStoreWinApp\\MyStoreWinApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.13\\microsoft.netcore.app.host.win-x64.5.0.13.nupkg.sha512"
+  ],
+  "logs": []
+}
