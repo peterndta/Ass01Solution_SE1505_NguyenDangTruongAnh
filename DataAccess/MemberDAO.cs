@@ -16,9 +16,9 @@ namespace DataAccess
         private static List<MemberObject> MemberList = new List<MemberObject>
         {
             new MemberObject{ MemberID = 1, MemberName = "Truong Anh", Email= "asd@gmail.com",
-            Password = "123", City = "HCM", Country = "VietNam" },
+            Password = "123", City = "HCM", Country = "Vietnam" },
             new MemberObject{ MemberID = 2, MemberName = "Peter", Email= "bcd@gmail.com",
-            Password = "123", City = "Hanoi", Country = "VietNam" }
+            Password = "123", City = "Hanoi", Country = "Vietnam" }
         };
         //Using Singleton Pattern
         private static MemberDAO instance = null;

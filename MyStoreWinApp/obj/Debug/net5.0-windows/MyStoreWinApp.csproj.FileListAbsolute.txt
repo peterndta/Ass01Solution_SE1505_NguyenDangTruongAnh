@@ -33,3 +33,4 @@ E:\Works\CN5\PRN211\Code PRN\Ass01Solution\MyStoreWinApp\bin\Debug\net5.0-window
 E:\Works\CN5\PRN211\Code PRN\Ass01Solution\MyStoreWinApp\bin\Debug\net5.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
 E:\Works\CN5\PRN211\Code PRN\Ass01Solution\MyStoreWinApp\bin\Debug\net5.0-windows\Microsoft.Extensions.Primitives.dll
 E:\Works\CN5\PRN211\Code PRN\Ass01Solution\MyStoreWinApp\bin\Debug\net5.0-windows\appsettings.json
+E:\Works\CN5\PRN211\Code PRN\Ass01Solution\MyStoreWinApp\obj\Debug\net5.0-windows\MyStoreWinApp.Properties.Resources.resources

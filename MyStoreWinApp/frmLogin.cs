@@ -33,7 +33,7 @@ namespace MyStoreWinApp
             {
                 frmMemberDetails frmMemberDetails = new frmMemberDetails
                 {
-                    Text = "Update member",
+                    Text = "My Info",
                     InsertOrUpdate = true,
                     MemberInfo = loginInfo,
                     MemberRepository = memeberRepository,
