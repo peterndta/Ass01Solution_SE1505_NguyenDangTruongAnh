@@ -30,5 +30,6 @@ namespace DataAccess.Repository
         }
 
         MemberObject IMemberRepository.Login(string email, string password) => MemberDAO.Instance.Login(email, password);
+        
     }
 }

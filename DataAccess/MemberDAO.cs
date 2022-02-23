@@ -2,16 +2,16 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-
 namespace DataAccess
 {
     public class MemberDAO
     {
         private static List<MemberObject> AccountList = new List<MemberObject>
         {
-            new MemberObject{ MemberID = 1, MemberName = "FStore", Email= "admin@fstore.com",
-            Password = "admin@@", City = "HCM", Country = "VietNam" },
+           new MemberObject{ MemberID = 1, MemberName = "FStore", Email= "admin@fstore.com",
+           Password = "admin@@", City = "HCM", Country = "VietNam" },
         };
+
         //Initialize member list
         private static List<MemberObject> MemberList = new List<MemberObject>
         {
@@ -97,7 +97,7 @@ namespace DataAccess
         public MemberObject Login(string email, string password)
         {
             //using LINQ to Object
-            MemberObject account = AccountList.SingleOrDefault(pro => pro.Email == email && pro.Password == password);
+            MemberObject account = MemberList.SingleOrDefault(pro => pro.Email == email && pro.Password == password);
             return account;
         }
 

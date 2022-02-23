@@ -2,7 +2,7 @@
 using DataAccess.Repository;
 using System;
 using System.Windows.Forms;
-
+using Microsoft.Extensions.Configuration;
 namespace MyStoreWinApp
 {
     public partial class frmLogin : Form
@@ -24,9 +24,23 @@ namespace MyStoreWinApp
             frmMemberManagement frmMemberManagement = new frmMemberManagement();
             var Email = txtEmail.Text;
             var Password = txtPassword.Text;
-
+            var adminDefaultSettings = Program.Configuration.GetSection("AdminAccount").Get<MemberObject>();
+            var email = adminDefaultSettings.Email;
+            var password = adminDefaultSettings.Password;
             MemberObject loginInfo = memeberRepository.Login(Email, Password);
+            
             if (loginInfo != null)
+            {
+                frmMemberDetails frmMemberDetails = new frmMemberDetails
+                {
+                    Text = "Update member",
+                    InsertOrUpdate = true,
+                    MemberInfo = loginInfo,
+                    MemberRepository = memeberRepository,
+                };
+                frmMemberDetails.ShowDialog();
+            }
+            else if (Email == email && Password == password)
             {
                 frmMemberManagement.ShowDialog();
             }
@@ -41,5 +55,7 @@ namespace MyStoreWinApp
         {
             Close();
         }
+
+    
     }
 }

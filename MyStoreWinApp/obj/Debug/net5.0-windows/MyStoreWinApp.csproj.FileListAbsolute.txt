@@ -23,3 +23,13 @@ E:\Works\CN5\PRN211\Code PRN\Ass01Solution\MyStoreWinApp\bin\Debug\net5.0-window
 E:\Works\CN5\PRN211\Code PRN\Ass01Solution\MyStoreWinApp\bin\Debug\net5.0-windows\BusinessObject.pdb
 E:\Works\CN5\PRN211\Code PRN\Ass01Solution\MyStoreWinApp\obj\Debug\net5.0-windows\MyStoreWinApp.csproj.CopyComplete
 E:\Works\CN5\PRN211\Code PRN\Ass01Solution\MyStoreWinApp\obj\Debug\net5.0-windows\MyStoreWinApp.frmMemberDetails.resources
+E:\Works\CN5\PRN211\Code PRN\Ass01Solution\MyStoreWinApp\bin\Debug\net5.0-windows\Microsoft.Extensions.Configuration.dll
+E:\Works\CN5\PRN211\Code PRN\Ass01Solution\MyStoreWinApp\bin\Debug\net5.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+E:\Works\CN5\PRN211\Code PRN\Ass01Solution\MyStoreWinApp\bin\Debug\net5.0-windows\Microsoft.Extensions.Configuration.Binder.dll
+E:\Works\CN5\PRN211\Code PRN\Ass01Solution\MyStoreWinApp\bin\Debug\net5.0-windows\Microsoft.Extensions.Configuration.FileExtensions.dll
+E:\Works\CN5\PRN211\Code PRN\Ass01Solution\MyStoreWinApp\bin\Debug\net5.0-windows\Microsoft.Extensions.Configuration.Json.dll
+E:\Works\CN5\PRN211\Code PRN\Ass01Solution\MyStoreWinApp\bin\Debug\net5.0-windows\Microsoft.Extensions.FileProviders.Abstractions.dll
+E:\Works\CN5\PRN211\Code PRN\Ass01Solution\MyStoreWinApp\bin\Debug\net5.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
+E:\Works\CN5\PRN211\Code PRN\Ass01Solution\MyStoreWinApp\bin\Debug\net5.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
+E:\Works\CN5\PRN211\Code PRN\Ass01Solution\MyStoreWinApp\bin\Debug\net5.0-windows\Microsoft.Extensions.Primitives.dll
+E:\Works\CN5\PRN211\Code PRN\Ass01Solution\MyStoreWinApp\bin\Debug\net5.0-windows\appsettings.json
