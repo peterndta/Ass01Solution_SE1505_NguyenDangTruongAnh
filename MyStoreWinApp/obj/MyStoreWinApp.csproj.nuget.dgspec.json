@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Works\\CN5\\PRN211\\Code PRN\\Ass01Solution\\MyStoreWinApp\\MyStoreWinApp.csproj": {}
+    "E:\\Works\\CN5\\PRN211\\Ass01Solution_SE1505_NguyenDangTruongAnh\\MyStoreWinApp\\MyStoreWinApp.csproj": {}
   },
   "projects": {
-    "E:\\Works\\CN5\\PRN211\\Code PRN\\Ass01Solution\\BusinessObject\\BusinessObject.csproj": {
+    "E:\\Works\\CN5\\PRN211\\Ass01Solution_SE1505_NguyenDangTruongAnh\\BusinessObject\\BusinessObject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Works\\CN5\\PRN211\\Code PRN\\Ass01Solution\\BusinessObject\\BusinessObject.csproj",
+        "projectUniqueName": "E:\\Works\\CN5\\PRN211\\Ass01Solution_SE1505_NguyenDangTruongAnh\\BusinessObject\\BusinessObject.csproj",
         "projectName": "BusinessObject",
-        "projectPath": "E:\\Works\\CN5\\PRN211\\Code PRN\\Ass01Solution\\BusinessObject\\BusinessObject.csproj",
+        "projectPath": "E:\\Works\\CN5\\PRN211\\Ass01Solution_SE1505_NguyenDangTruongAnh\\BusinessObject\\BusinessObject.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "E:\\Works\\CN5\\PRN211\\Code PRN\\Ass01Solution\\BusinessObject\\obj\\",
+        "outputPath": "E:\\Works\\CN5\\PRN211\\Ass01Solution_SE1505_NguyenDangTruongAnh\\BusinessObject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -58,14 +58,14 @@
         }
       }
     },
-    "E:\\Works\\CN5\\PRN211\\Code PRN\\Ass01Solution\\DataAccess\\DataAccess.csproj": {
+    "E:\\Works\\CN5\\PRN211\\Ass01Solution_SE1505_NguyenDangTruongAnh\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Works\\CN5\\PRN211\\Code PRN\\Ass01Solution\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "E:\\Works\\CN5\\PRN211\\Ass01Solution_SE1505_NguyenDangTruongAnh\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "E:\\Works\\CN5\\PRN211\\Code PRN\\Ass01Solution\\DataAccess\\DataAccess.csproj",
+        "projectPath": "E:\\Works\\CN5\\PRN211\\Ass01Solution_SE1505_NguyenDangTruongAnh\\DataAccess\\DataAccess.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "E:\\Works\\CN5\\PRN211\\Code PRN\\Ass01Solution\\DataAccess\\obj\\",
+        "outputPath": "E:\\Works\\CN5\\PRN211\\Ass01Solution_SE1505_NguyenDangTruongAnh\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -82,8 +82,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "E:\\Works\\CN5\\PRN211\\Code PRN\\Ass01Solution\\BusinessObject\\BusinessObject.csproj": {
-                "projectPath": "E:\\Works\\CN5\\PRN211\\Code PRN\\Ass01Solution\\BusinessObject\\BusinessObject.csproj"
+              "E:\\Works\\CN5\\PRN211\\Ass01Solution_SE1505_NguyenDangTruongAnh\\BusinessObject\\BusinessObject.csproj": {
+                "projectPath": "E:\\Works\\CN5\\PRN211\\Ass01Solution_SE1505_NguyenDangTruongAnh\\BusinessObject\\BusinessObject.csproj"
               }
             }
           }
@@ -116,14 +116,14 @@
         }
       }
     },
-    "E:\\Works\\CN5\\PRN211\\Code PRN\\Ass01Solution\\MyStoreWinApp\\MyStoreWinApp.csproj": {
+    "E:\\Works\\CN5\\PRN211\\Ass01Solution_SE1505_NguyenDangTruongAnh\\MyStoreWinApp\\MyStoreWinApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Works\\CN5\\PRN211\\Code PRN\\Ass01Solution\\MyStoreWinApp\\MyStoreWinApp.csproj",
+        "projectUniqueName": "E:\\Works\\CN5\\PRN211\\Ass01Solution_SE1505_NguyenDangTruongAnh\\MyStoreWinApp\\MyStoreWinApp.csproj",
         "projectName": "MyStoreWinApp",
-        "projectPath": "E:\\Works\\CN5\\PRN211\\Code PRN\\Ass01Solution\\MyStoreWinApp\\MyStoreWinApp.csproj",
+        "projectPath": "E:\\Works\\CN5\\PRN211\\Ass01Solution_SE1505_NguyenDangTruongAnh\\MyStoreWinApp\\MyStoreWinApp.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "E:\\Works\\CN5\\PRN211\\Code PRN\\Ass01Solution\\MyStoreWinApp\\obj\\",
+        "outputPath": "E:\\Works\\CN5\\PRN211\\Ass01Solution_SE1505_NguyenDangTruongAnh\\MyStoreWinApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -140,8 +140,8 @@
           "net5.0-windows7.0": {
             "targetAlias": "net5.0-windows",
             "projectReferences": {
-              "E:\\Works\\CN5\\PRN211\\Code PRN\\Ass01Solution\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "E:\\Works\\CN5\\PRN211\\Code PRN\\Ass01Solution\\DataAccess\\DataAccess.csproj"
+              "E:\\Works\\CN5\\PRN211\\Ass01Solution_SE1505_NguyenDangTruongAnh\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "E:\\Works\\CN5\\PRN211\\Ass01Solution_SE1505_NguyenDangTruongAnh\\DataAccess\\DataAccess.csproj"
               }
             }
           }

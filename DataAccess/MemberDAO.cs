@@ -18,6 +18,10 @@ namespace DataAccess
             new MemberObject{ MemberID = 1, MemberName = "Truong Anh", Email= "asd@gmail.com",
             Password = "123", City = "HCM", Country = "Vietnam" },
             new MemberObject{ MemberID = 2, MemberName = "Peter", Email= "bcd@gmail.com",
+            Password = "123", City = "Kuala Lumpur", Country = "Malaysia" },
+            new MemberObject{ MemberID = 3, MemberName = "Bao", Email= "bcd@gmail.com",
+            Password = "123", City = "Vieng Chan", Country = "Lao" },
+            new MemberObject{ MemberID = 4, MemberName = "Cuong", Email= "bcd@gmail.com",
             Password = "123", City = "Hanoi", Country = "Vietnam" }
         };
         //Using Singleton Pattern
@@ -112,9 +116,17 @@ namespace DataAccess
         //Sort
         public List<MemberObject> SortingMember() 
         {
-            List<MemberObject> memberSort = MemberList;
-            memberSort.Reverse();
-            return memberSort;
+            var newList = MemberList.OrderByDescending(x => x.MemberName).ToList();
+            MemberList = newList;
+            return MemberList;
+        }
+        //---------------------------------------------------
+        //Filter
+        public List<MemberObject> FilterByCountry(string country)
+        {
+            //using LINQ to Object
+            List<MemberObject> listFilterCountry = MemberList.FindAll(pro => pro.Country == country);
+            return listFilterCountry;
         }
 
     }//end Class

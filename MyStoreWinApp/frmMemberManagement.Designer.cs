@@ -229,6 +229,7 @@
             this.btnFilter.TabIndex = 18;
             this.btnFilter.Text = "Filter";
             this.btnFilter.UseVisualStyleBackColor = true;
+            this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
             // 
             // btnSort
             // 
@@ -271,10 +272,15 @@
             // cbFilter
             // 
             this.cbFilter.FormattingEnabled = true;
+            this.cbFilter.Items.AddRange(new object[] {
+            "Vietnam",
+            "Lao",
+            "Malaysia"});
             this.cbFilter.Location = new System.Drawing.Point(492, 184);
             this.cbFilter.Name = "cbFilter";
             this.cbFilter.Size = new System.Drawing.Size(121, 23);
             this.cbFilter.TabIndex = 24;
+            this.cbFilter.Text = "Choose Country";
             // 
             // frmMemberManagement
             // 

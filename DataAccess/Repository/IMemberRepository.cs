@@ -17,6 +17,7 @@ namespace DataAccess.Repository
         MemberObject Login(string email, string password);
         MemberObject SearchByID(int memberID);
         IEnumerable<MemberObject> SortingMember();
+        IEnumerable<MemberObject> FilterByCountry(string country);
 
     }
 }

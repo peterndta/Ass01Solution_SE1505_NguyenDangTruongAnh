@@ -83,7 +83,8 @@ namespace MyStoreWinApp
         //----------------------------------------
         public void LoadMemberList()
         {
-            var members = MemberList;
+            var members = memberRepository.GetMembers();
+            //var members = MemberList;
             try
             {
                 //The BindingSource component is designed to simplify
@@ -215,6 +216,48 @@ namespace MyStoreWinApp
         {
             MemberList = memberRepository.SortingMember();
             LoadMemberList();
+        }
+
+        private void btnFilter_Click(object sender, EventArgs e)
+        {
+            var country = cbFilter.Text;
+            MemberList = memberRepository.FilterByCountry(country);
+            if(country != "Choose Country")
+            {
+                try
+                {
+                    //The BindingSource component is designed to simplify
+                    //the process of binding controls to and underlying data source
+                    source = new BindingSource();
+                    source.DataSource = MemberList;
+
+                    txtMemberID.DataBindings.Clear();
+                    txtMemberName.DataBindings.Clear();
+                    txtEmail.DataBindings.Clear();
+                    txtPassword.DataBindings.Clear();
+                    txtCity.DataBindings.Clear();
+                    txtCountry.DataBindings.Clear();
+
+                    txtMemberID.DataBindings.Add("Text", source, "MemberID");
+                    txtMemberName.DataBindings.Add("Text", source, "MemberName");
+                    txtEmail.DataBindings.Add("Text", source, "Email");
+                    txtPassword.DataBindings.Add("Text", source, "Password");
+                    txtCity.DataBindings.Add("Text", source, "City");
+                    txtCountry.DataBindings.Add("Text", source, "Country");
+
+                    dgvMemberList.DataSource = null;
+                    dgvMemberList.DataSource = source;
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Filter member list");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please Select a Country");
+            }
         }
     }
 

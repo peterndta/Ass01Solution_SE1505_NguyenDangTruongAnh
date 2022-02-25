@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UhlmqV1739WAG5Td0pAc+c2fQGoxfE9ynVPXsSIFY3KUEfQ19qeQYcO5EAJtxG+A9ICj40yCEPxmt7gcxvEC9w==",
+  "dgSpecHash": "TSbhbRAZUdR9RmVyqQzb8GvBfIAWUwJ+KBNmGmak5tFtO3ruJnFFGEgIqQD+1BKlkGIJkVzUDZsVmVADgOOl3A==",
   "success": true,
-  "projectFilePath": "E:\\Works\\CN5\\PRN211\\Code PRN\\Ass01Solution\\MyStoreWinApp\\MyStoreWinApp.csproj",
+  "projectFilePath": "E:\\Works\\CN5\\PRN211\\Ass01Solution_SE1505_NguyenDangTruongAnh\\MyStoreWinApp\\MyStoreWinApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.configuration\\5.0.0\\microsoft.extensions.configuration.5.0.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",

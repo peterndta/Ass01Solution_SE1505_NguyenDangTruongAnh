@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Works\\CN5\\PRN211\\Code PRN\\Ass01Solution\\BusinessObject\\BusinessObject.csproj",
+      "projectUniqueName": "E:\\Works\\CN5\\PRN211\\Ass01Solution_SE1505_NguyenDangTruongAnh\\BusinessObject\\BusinessObject.csproj",
       "projectName": "BusinessObject",
-      "projectPath": "E:\\Works\\CN5\\PRN211\\Code PRN\\Ass01Solution\\BusinessObject\\BusinessObject.csproj",
+      "projectPath": "E:\\Works\\CN5\\PRN211\\Ass01Solution_SE1505_NguyenDangTruongAnh\\BusinessObject\\BusinessObject.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "E:\\Works\\CN5\\PRN211\\Code PRN\\Ass01Solution\\BusinessObject\\obj\\",
+      "outputPath": "E:\\Works\\CN5\\PRN211\\Ass01Solution_SE1505_NguyenDangTruongAnh\\BusinessObject\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
