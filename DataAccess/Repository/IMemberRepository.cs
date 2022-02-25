@@ -15,6 +15,8 @@ namespace DataAccess.Repository
         void DeleteMember(int memberId);
         void UpdateMember(MemberObject member);
         MemberObject Login(string email, string password);
-  
+        MemberObject SearchByID(int memberID);
+        IEnumerable<MemberObject> SortingMember();
+
     }
 }

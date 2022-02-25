@@ -52,7 +52,8 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.lbSearch = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.cbCountryFilter = new System.Windows.Forms.ComboBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.cbFilter = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMemberList)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,7 +61,7 @@
             // 
             this.lbTitle.AutoSize = true;
             this.lbTitle.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbTitle.Location = new System.Drawing.Point(165, 9);
+            this.lbTitle.Location = new System.Drawing.Point(140, 9);
             this.lbTitle.Name = "lbTitle";
             this.lbTitle.Size = new System.Drawing.Size(399, 41);
             this.lbTitle.TabIndex = 0;
@@ -70,7 +71,7 @@
             // 
             this.lbMemberID.AutoSize = true;
             this.lbMemberID.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbMemberID.Location = new System.Drawing.Point(65, 85);
+            this.lbMemberID.Location = new System.Drawing.Point(42, 86);
             this.lbMemberID.Name = "lbMemberID";
             this.lbMemberID.Size = new System.Drawing.Size(84, 20);
             this.lbMemberID.TabIndex = 1;
@@ -80,7 +81,7 @@
             // 
             this.lbMemberName.AutoSize = true;
             this.lbMemberName.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbMemberName.Location = new System.Drawing.Point(65, 113);
+            this.lbMemberName.Location = new System.Drawing.Point(42, 114);
             this.lbMemberName.Name = "lbMemberName";
             this.lbMemberName.Size = new System.Drawing.Size(109, 20);
             this.lbMemberName.TabIndex = 2;
@@ -90,7 +91,7 @@
             // 
             this.lbEmail.AutoSize = true;
             this.lbEmail.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbEmail.Location = new System.Drawing.Point(65, 144);
+            this.lbEmail.Location = new System.Drawing.Point(42, 145);
             this.lbEmail.Name = "lbEmail";
             this.lbEmail.Size = new System.Drawing.Size(46, 20);
             this.lbEmail.TabIndex = 3;
@@ -100,7 +101,7 @@
             // 
             this.lbPassword.AutoSize = true;
             this.lbPassword.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbPassword.Location = new System.Drawing.Point(382, 82);
+            this.lbPassword.Location = new System.Drawing.Point(372, 84);
             this.lbPassword.Name = "lbPassword";
             this.lbPassword.Size = new System.Drawing.Size(70, 20);
             this.lbPassword.TabIndex = 4;
@@ -110,7 +111,7 @@
             // 
             this.lbCity.AutoSize = true;
             this.lbCity.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbCity.Location = new System.Drawing.Point(382, 110);
+            this.lbCity.Location = new System.Drawing.Point(372, 112);
             this.lbCity.Name = "lbCity";
             this.lbCity.Size = new System.Drawing.Size(34, 20);
             this.lbCity.TabIndex = 5;
@@ -120,7 +121,7 @@
             // 
             this.lbCountry.AutoSize = true;
             this.lbCountry.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbCountry.Location = new System.Drawing.Point(382, 141);
+            this.lbCountry.Location = new System.Drawing.Point(372, 143);
             this.lbCountry.Name = "lbCountry";
             this.lbCountry.Size = new System.Drawing.Size(60, 20);
             this.lbCountry.TabIndex = 6;
@@ -128,35 +129,35 @@
             // 
             // txtMemberID
             // 
-            this.txtMemberID.Location = new System.Drawing.Point(183, 82);
+            this.txtMemberID.Location = new System.Drawing.Point(160, 83);
             this.txtMemberID.Name = "txtMemberID";
             this.txtMemberID.Size = new System.Drawing.Size(171, 23);
             this.txtMemberID.TabIndex = 7;
             // 
             // txtMemberName
             // 
-            this.txtMemberName.Location = new System.Drawing.Point(183, 110);
+            this.txtMemberName.Location = new System.Drawing.Point(160, 111);
             this.txtMemberName.Name = "txtMemberName";
             this.txtMemberName.Size = new System.Drawing.Size(171, 23);
             this.txtMemberName.TabIndex = 8;
             // 
             // txtCountry
             // 
-            this.txtCountry.Location = new System.Drawing.Point(469, 139);
+            this.txtCountry.Location = new System.Drawing.Point(448, 140);
             this.txtCountry.Name = "txtCountry";
             this.txtCountry.Size = new System.Drawing.Size(182, 23);
             this.txtCountry.TabIndex = 12;
             // 
             // txtCity
             // 
-            this.txtCity.Location = new System.Drawing.Point(469, 110);
+            this.txtCity.Location = new System.Drawing.Point(448, 111);
             this.txtCity.Name = "txtCity";
             this.txtCity.Size = new System.Drawing.Size(182, 23);
             this.txtCity.TabIndex = 11;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(469, 82);
+            this.txtPassword.Location = new System.Drawing.Point(448, 83);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(182, 23);
@@ -164,14 +165,14 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(183, 139);
+            this.txtEmail.Location = new System.Drawing.Point(160, 140);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(171, 23);
             this.txtEmail.TabIndex = 9;
             // 
             // btnLoad
             // 
-            this.btnLoad.Location = new System.Drawing.Point(74, 231);
+            this.btnLoad.Location = new System.Drawing.Point(107, 226);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(75, 23);
             this.btnLoad.TabIndex = 13;
@@ -181,7 +182,7 @@
             // 
             // btnNew
             // 
-            this.btnNew.Location = new System.Drawing.Point(211, 231);
+            this.btnNew.Location = new System.Drawing.Point(401, 226);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(75, 23);
             this.btnNew.TabIndex = 14;
@@ -191,7 +192,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(352, 231);
+            this.btnDelete.Location = new System.Drawing.Point(575, 226);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
             this.btnDelete.TabIndex = 15;
@@ -201,7 +202,7 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(337, 469);
+            this.btnClose.Location = new System.Drawing.Point(306, 438);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(90, 23);
             this.btnClose.TabIndex = 16;
@@ -212,35 +213,36 @@
             // dgvMemberList
             // 
             this.dgvMemberList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMemberList.Location = new System.Drawing.Point(30, 270);
+            this.dgvMemberList.Location = new System.Drawing.Point(12, 255);
             this.dgvMemberList.Name = "dgvMemberList";
             this.dgvMemberList.ReadOnly = true;
             this.dgvMemberList.RowTemplate.Height = 25;
             this.dgvMemberList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMemberList.Size = new System.Drawing.Size(564, 186);
+            this.dgvMemberList.Size = new System.Drawing.Size(660, 177);
             this.dgvMemberList.TabIndex = 17;
             // 
             // btnFilter
             // 
-            this.btnFilter.Location = new System.Drawing.Point(624, 231);
+            this.btnFilter.Location = new System.Drawing.Point(619, 184);
             this.btnFilter.Name = "btnFilter";
-            this.btnFilter.Size = new System.Drawing.Size(81, 23);
+            this.btnFilter.Size = new System.Drawing.Size(43, 23);
             this.btnFilter.TabIndex = 18;
             this.btnFilter.Text = "Filter";
             this.btnFilter.UseVisualStyleBackColor = true;
             // 
             // btnSort
             // 
-            this.btnSort.Location = new System.Drawing.Point(489, 231);
+            this.btnSort.Location = new System.Drawing.Point(247, 226);
             this.btnSort.Name = "btnSort";
             this.btnSort.Size = new System.Drawing.Size(75, 23);
             this.btnSort.TabIndex = 20;
             this.btnSort.Text = "Sort";
             this.btnSort.UseVisualStyleBackColor = true;
+            this.btnSort.Click += new System.EventHandler(this.btnSort_Click);
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(227, 188);
+            this.txtSearch.Location = new System.Drawing.Point(140, 186);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(302, 23);
             this.txtSearch.TabIndex = 21;
@@ -249,38 +251,37 @@
             // 
             this.lbSearch.AutoSize = true;
             this.lbSearch.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbSearch.Location = new System.Drawing.Point(123, 189);
+            this.lbSearch.Location = new System.Drawing.Point(62, 188);
             this.lbSearch.Name = "lbSearch";
-            this.lbSearch.Size = new System.Drawing.Size(98, 19);
+            this.lbSearch.Size = new System.Drawing.Size(72, 19);
             this.lbSearch.TabIndex = 22;
-            this.lbSearch.Text = "Search Name";
+            this.lbSearch.Text = "Search ID";
             // 
             // btnSearch
             // 
             this.btnSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSearch.BackgroundImage")));
             this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSearch.Location = new System.Drawing.Point(535, 188);
+            this.btnSearch.Location = new System.Drawing.Point(448, 185);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(28, 23);
             this.btnSearch.TabIndex = 23;
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // cbCountryFilter
+            // cbFilter
             // 
-            this.cbCountryFilter.FormattingEnabled = true;
-            this.cbCountryFilter.Items.AddRange(new object[] {
-            "Vietnam"});
-            this.cbCountryFilter.Location = new System.Drawing.Point(600, 270);
-            this.cbCountryFilter.Name = "cbCountryFilter";
-            this.cbCountryFilter.Size = new System.Drawing.Size(121, 23);
-            this.cbCountryFilter.TabIndex = 24;
+            this.cbFilter.FormattingEnabled = true;
+            this.cbFilter.Location = new System.Drawing.Point(492, 184);
+            this.cbFilter.Name = "cbFilter";
+            this.cbFilter.Size = new System.Drawing.Size(121, 23);
+            this.cbFilter.TabIndex = 24;
             // 
             // frmMemberManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(729, 504);
-            this.Controls.Add(this.cbCountryFilter);
+            this.ClientSize = new System.Drawing.Size(681, 470);
+            this.Controls.Add(this.cbFilter);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.lbSearch);
             this.Controls.Add(this.txtSearch);
@@ -339,6 +340,7 @@
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label lbSearch;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.ComboBox cbCountryFilter;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.ComboBox cbFilter;
     }
 }

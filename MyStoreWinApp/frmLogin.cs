@@ -24,12 +24,14 @@ namespace MyStoreWinApp
             frmMemberManagement frmMemberManagement = new frmMemberManagement();
             var Email = txtEmail.Text;
             var Password = txtPassword.Text;
+
+            //Get Admin account from json
             var adminDefaultSettings = Program.Configuration.GetSection("AdminAccount").Get<MemberObject>();
-            var email = adminDefaultSettings.Email;
-            var password = adminDefaultSettings.Password;
+            var email = adminDefaultSettings.Email; //admin email
+            var password = adminDefaultSettings.Password; //admin password
             MemberObject loginInfo = memeberRepository.Login(Email, Password);
             
-            if (loginInfo != null)
+            if (loginInfo != null) //check if member
             {
                 frmMemberDetails frmMemberDetails = new frmMemberDetails
                 {
@@ -40,7 +42,7 @@ namespace MyStoreWinApp
                 };
                 frmMemberDetails.ShowDialog();
             }
-            else if (Email == email && Password == password)
+            else if (Email == email && Password == password) //check if admin
             {
                 frmMemberManagement.ShowDialog();
             }

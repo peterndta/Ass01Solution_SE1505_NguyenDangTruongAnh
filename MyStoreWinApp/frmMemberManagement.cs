@@ -1,4 +1,5 @@
 ﻿using BusinessObject;
+using DataAccess;
 using DataAccess.Repository;
 using System;
 using System.Collections.Generic;
@@ -16,6 +17,7 @@ namespace MyStoreWinApp
     {
         IMemberRepository memberRepository = new MemberRepository();
         BindingSource source;
+        private IEnumerable<MemberObject> MemberList;
         public frmMemberManagement()
         {
             InitializeComponent();
@@ -25,6 +27,7 @@ namespace MyStoreWinApp
         {
             btnDelete.Enabled = false;
             //Register this event to open the frmMemberDetais form that performs updating
+            MemberList = memberRepository.GetMembers();
             dgvMemberList.CellDoubleClick += DvgMemberList_CellDoubleClick;
         }
 
@@ -80,7 +83,7 @@ namespace MyStoreWinApp
         //----------------------------------------
         public void LoadMemberList()
         {
-            var members = memberRepository.GetMembers();
+            var members = MemberList;
             try
             {
                 //The BindingSource component is designed to simplify
@@ -164,6 +167,55 @@ namespace MyStoreWinApp
            //login.ShowDialog();
         }
 
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var memberID = int.Parse(txtSearch.Text);
+                MemberObject member = memberRepository.SearchByID(memberID);
+                if (member != null)
+                {
+                    source = new BindingSource();
+                    source.DataSource = member;
+
+                    txtMemberID.DataBindings.Clear();
+                    txtMemberName.DataBindings.Clear();
+                    txtEmail.DataBindings.Clear();
+                    txtPassword.DataBindings.Clear();
+                    txtCity.DataBindings.Clear();
+                    txtCountry.DataBindings.Clear();
+
+                    txtMemberID.DataBindings.Add("Text", source, "MemberID");
+                    txtMemberName.DataBindings.Add("Text", source, "MemberName");
+                    txtEmail.DataBindings.Add("Text", source, "Email");
+                    txtPassword.DataBindings.Add("Text", source, "Password");
+                    txtCity.DataBindings.Add("Text", source, "City");
+                    txtCountry.DataBindings.Add("Text", source, "Country");
+
+                    dgvMemberList.DataSource = null;
+                    dgvMemberList.DataSource = source;
+
+                    btnDelete.Enabled = true;
+
+                }
+                else
+                {
+                    ClearText();
+                    btnDelete.Enabled = false;
+                    MessageBox.Show("This member does not exist!");
+                }
+            }                      
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Search...");
+            }
+        }
+
+        private void btnSort_Click(object sender, EventArgs e)
+        {
+            MemberList = memberRepository.SortingMember();
+            LoadMemberList();
+        }
     }
 
 }

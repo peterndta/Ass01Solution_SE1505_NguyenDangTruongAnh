@@ -30,6 +30,7 @@ namespace DataAccess.Repository
         }
 
         MemberObject IMemberRepository.Login(string email, string password) => MemberDAO.Instance.Login(email, password);
-        
+        MemberObject IMemberRepository.SearchByID(int memberID) => MemberDAO.Instance.SearchByID(memberID);
+        public IEnumerable<MemberObject> SortingMember() => MemberDAO.Instance.SortingMember();
     }
 }

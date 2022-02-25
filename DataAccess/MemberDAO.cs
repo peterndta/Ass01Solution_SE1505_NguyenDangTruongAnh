@@ -6,11 +6,11 @@ namespace DataAccess
 {
     public class MemberDAO
     {
-        private static List<MemberObject> AccountList = new List<MemberObject>
-        {
-           new MemberObject{ MemberID = 1, MemberName = "FStore", Email= "admin@fstore.com",
-           Password = "admin@@", City = "HCM", Country = "VietNam" },
-        };
+        //private static List<MemberObject> AccountList = new List<MemberObject>
+        //{
+        //   new MemberObject{ MemberID = 1, MemberName = "FStore", Email= "admin@fstore.com",
+        //   Password = "admin@@", City = "HCM", Country = "VietNam" },
+        //};
 
         //Initialize member list
         private static List<MemberObject> MemberList = new List<MemberObject>
@@ -100,7 +100,22 @@ namespace DataAccess
             MemberObject account = MemberList.SingleOrDefault(pro => pro.Email == email && pro.Password == password);
             return account;
         }
-
+        //---------------------------------------------------
+        //Search
+        public MemberObject SearchByID(int ID)
+        {
+            //using LINQ to Object
+            MemberObject member = MemberList.SingleOrDefault(pro => pro.MemberID == ID);
+            return member;
+        }
+        //---------------------------------------------------
+        //Sort
+        public List<MemberObject> SortingMember() 
+        {
+            List<MemberObject> memberSort = MemberList;
+            memberSort.Reverse();
+            return memberSort;
+        }
 
     }//end Class
 }
